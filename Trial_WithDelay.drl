@@ -1,0 +1,26 @@
+from DRCF import *
+
+
+# User frames (bases)
+
+# Tool frames, make sure tcp coordinates (XYZABC) match the ones in controller!
+# TCP_0 = [0.000, 0.000, 0.000, 0.000, 0.000, 0.000]
+
+# Globals
+set_accj(100)
+
+def Main():
+  set_ref_coord(DR_BASE)
+  set_tcp("TCP_0")
+  movel([-559.000, 34.500, 651.500, 0.000, -180.000, -0.000], v=1000.0, a=4000.0)
+  movel([-559.000, 831.912, 651.500, 0.000, -180.000, -0.000], v=1000.0, a=4000.0)
+  wait(1.000)
+  movel([747.497, 575.654, 651.500, 0.000, -180.000, -0.000], v=1000.0, a=4000.0)
+  wait(1.000)
+  movel([-559.000, 831.912, 651.500, 0.000, -180.000, -0.000], v=1000.0, a=4000.0)
+  wait(1.000)
+  movel([-559.000, 34.500, 651.500, 0.000, -180.000, -0.000], v=1000.0, a=4000.0)
+#enddef Main
+
+
+Main()
